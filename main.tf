@@ -85,14 +85,14 @@ resource "aws_instance" "jubran_dev_node" {
     volume_size = 10
   }
 
-  provisioner "local-exec" {
-    command = templatefile("${var.host_os}-ssh-config.tpl", {
-      hostname     = self.public_ip,
-      user         = "ubuntu",
-      identityfile = "~/.ssh/jubran-dev-key"
-    })
-    interpreter = var.host_os == "linux" ? ["bash", "-c"] : ["powershell", "-command"]
-  }
+  # provisioner "local-exec" {
+  #   command = templatefile("${var.host_os}-ssh-config.tpl", {
+  #     hostname     = self.public_ip,
+  #     user         = "ubuntu",
+  #     identityfile = "~/.ssh/jubran-dev-key"
+  #   })
+  #   interpreter = var.host_os == "linux" ? ["bash", "-c"] : ["powershell", "-command"]
+  # }
 
   tags = {
     Name = "jubran_dev_node"
