@@ -65,10 +65,10 @@ resource "aws_security_group" "dev_sg" {
   }
 }
 
-# resource "aws_key_pair" "jubran_auth" {
-#   key_name   = "jubran_key"
-#   public_key = file("/mnt/workspace/jubran-dev-key.pub")
-# }
+resource "aws_key_pair" "jubran_auth" {
+  key_name   = "jubran_key"
+  public_key = file("/mnt/workspace/jubran-dev-key.pub")
+}
 
 resource "aws_instance" "jubran_dev_node" {
   instance_type = "t2.micro"
