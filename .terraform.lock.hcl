@@ -22,3 +22,17 @@ provider "registry.terraform.io/hashicorp/aws" {
     "zh:d5dc1683693a5fe2652952f50dbbeccd02716799c26c6d1a1378b226cf845e9b",
   ]
 }
+
+provider "registry.terraform.io/spacelift-io/spacelift" {
+  version     = "1.1.3"
+  constraints = "1.1.3"
+  hashes = [
+    "h1:spx9UUA9pBOhOysvknBLsioZkhD8c7UjyOOlAUgVr5A=",
+    "zh:0d272a46b1350a438ec820c852c9fa0666cc98da578f8030e826ae287de6afaa",
+    "zh:898c0e5fb94b55c3123d22766bdf3eafb5429eca043dc333c5bc774a9ec1076f",
+    "zh:95d016e64aa6d6d09ec826eecf65b4b3580a9286f82394555f53ea5c32b142e1",
+    "zh:a502dfc4513b1132533248c7cd11f7eea01d855cb0e3f9c9d564cd762e6ea772",
+    "zh:beb4aac9038007ecb98da3d9b332fcc92ade7d0dfecd1cdcdf28b47abb052ab6",
+    "zh:fce87bc3b234ddff5cafefcf42c0cb351b842ffbdff7f2b42d873ae2c50f5160",
+  ]
+}
