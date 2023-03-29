@@ -12,5 +12,5 @@ resource "spacelift_policy" "check-instance-type" {
 resource "spacelift_policy" "trigger-run-from-pr" {
   name = "trigger run from pr"
   body = file("./policies/push/trigger-run-from-pr.rego")
-  type = "PUSH"
+  type = "GIT_PUSH"
 }
