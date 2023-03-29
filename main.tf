@@ -96,7 +96,7 @@ resource "aws_instance" "jubran_dev_node" {
 
   tags = {
     Name = "jubran_dev_node"
-    Test = "this is a test for tracked runs triggered from a pr"
+    Test = "this is a test for tracked runs triggered from a pr, this is another test"
   }
 
 
