@@ -97,7 +97,6 @@ resource "aws_instance" "jubran_dev_node" {
   tags = {
     Name = "jubran_dev_node"
     Test = "numbers 2324"
-    New = "tag2"
   }
 
 
