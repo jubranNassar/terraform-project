@@ -9,3 +9,11 @@ variable "worker_pool_private_key" {
 variable "worker_pool_id" {
   type = string
 }
+
+variable "worker_pool_security_groups" {
+  type = list
+}
+
+variable "worker_pool_subnets" {
+  type = list
+}
