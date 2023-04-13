@@ -90,3 +90,4 @@ resource "aws_instance" "jubran_dev_node" {
     Name = "jubran_dev_node"
   }
 } 
+
