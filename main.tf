@@ -71,7 +71,7 @@ resource "aws_key_pair" "jubran_auth" {
 }
 
 resource "aws_instance" "jubran_dev_node" {
-  instance_type = "t2.micro"
+  instance_type = "t1.micro"
   ami           = data.aws_ami.dev_server_ami.id
 
   key_name = aws_key_pair.jubran_auth.id
