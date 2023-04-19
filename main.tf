@@ -70,7 +70,7 @@ resource "aws_key_pair" "jubran_auth" {
   public_key = file("/mnt/workspace/jubran-dev-key.pub")
 }
 
-resource "aws_instance" "jubran_dev_node" 
+resource "aws_instance" "jubran_dev_node" {
   instance_type = "t2.micro"
   ami           = data.aws_ami.dev_server_ami.id
 
