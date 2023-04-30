@@ -11,9 +11,9 @@ variable "worker_pool_id" {
 }
 
 variable "worker_pool_security_groups" {
-  type = list
+  type = list(string)
 }
 
 variable "worker_pool_subnets" {
-  type = list
+  type = list(string)
 }
