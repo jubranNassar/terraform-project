@@ -84,11 +84,7 @@ resource "aws_instance" "jubran_dev_node" {
   root_block_device {
     volume_size = 10
   }
-
-
-  tags = {
-    Name = "jubran_dev_node"
-  }
+  
 } 
 
 
