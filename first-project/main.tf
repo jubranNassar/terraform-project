@@ -82,7 +82,7 @@ resource "aws_instance" "jubran_dev_node" {
   user_data = file("userdata.tpl")
 
   root_block_device {
-    volume_size = 8
+    volume_size = 10
   }
   
 } 
