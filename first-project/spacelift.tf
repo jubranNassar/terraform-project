@@ -29,7 +29,7 @@ resource "spacelift_policy" "trigger-run-from-pr" {
 
 resource "spacelift_policy" "discord" {
   name = "discord integration"
-  body = file("../policies/notificaion/discord.rego")
+  body = file("../policies/notification/discord.rego")
   type = "NOTIFICATION"
 }
 
@@ -38,3 +38,5 @@ resource "spacelift_policy" "slack" {
   body = file("../policies/notification/slack.rego")
   type = "NOTIFICATION"
 }
+
+
