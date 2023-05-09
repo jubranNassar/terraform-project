@@ -21,6 +21,21 @@ data "spacelift_aws_integration_attachment_external_id" "terraform-project" {
   write          = true
 }
 
+resource "aws_iam_role" "this" {
+  name = local.role_name
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      jsondecode(data.spacelift_aws_integration_attachment_external_id.terraform-project.assume_role_policy_statement)
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "this" {
+  role       = aws_iam_role.this.name
+  policy_arn = "arn:aws:iam::aws:policy/PowerUserAccess"
+}
 
 resource "spacelift_aws_integration_attachment" "this" {
   integration_id = spacelift_aws_integration.this.id
