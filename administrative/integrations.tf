@@ -14,6 +14,13 @@ resource "spacelift_aws_integration" "this" {
   role_arn                       = local.role_arn
 }
 
+data "spacelift_aws_integration_attachment_external_id" "terraform-project" {
+  integration_id = spacelift_aws_integration.this.id
+  stack_id       = "terraform-project"
+  read           = true
+  write          = true
+}
+
 
 resource "spacelift_aws_integration_attachment" "this" {
   integration_id = spacelift_aws_integration.this.id
