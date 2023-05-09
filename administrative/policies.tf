@@ -38,5 +38,3 @@ resource "spacelift_policy" "slack" {
   body = file("../policies/notification/slack.rego")
   type = "NOTIFICATION"
 }
-
-
