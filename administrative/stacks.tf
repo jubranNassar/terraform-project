@@ -7,3 +7,14 @@ resource "spacelift_stack" "terraform-project" {
         namespace = "jubranNassar"
     }
 }
+
+
+resource "spacelift_stack" "worker-pool" {
+    branch = "main"
+    name = "worker-pool"
+    repository = "terraform-project"
+    project_root = "worker-pool"
+    github_enterprise {
+        namespace = "jubranNassar"
+    }
+}
