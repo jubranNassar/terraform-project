@@ -4,9 +4,9 @@ resource "spacelift_mounted_file" "public-key" {
   content       = filebase64("${path.module}/jubran-dev-key.pub")
 }
 
-resource "spacelift_environment_variable" "" {
-  stack_id   = "worker-pool"
-  name       = "worker_pool_config"
-  value      = ""
-  write_only = false
-}
+# resource "spacelift_environment_variable" "worker_pool_config" {
+#   stack_id   = "worker-pool"
+#   name       = "worker_pool_config"
+#   value      = ""
+#   write_only = false
+# }

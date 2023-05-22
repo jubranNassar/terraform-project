@@ -71,7 +71,7 @@ resource "aws_key_pair" "jubran_auth" {
 }
 
 resource "aws_instance" "jubran_dev_node" {
-  instance_type = "t3.micro"
+  instance_type = "t3.micro"  
   ami           = data.aws_ami.dev_server_ami.id
 
   key_name = aws_key_pair.jubran_auth.id
@@ -84,7 +84,6 @@ resource "aws_instance" "jubran_dev_node" {
   root_block_device {
     volume_size = 10
   }
-  
 } 
 
 
