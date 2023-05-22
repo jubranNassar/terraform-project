@@ -16,4 +16,3 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 
-spacelift.csr
