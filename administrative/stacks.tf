@@ -13,7 +13,7 @@ resource "spacelift_drift_detection" "terraform-project-drift" {
   reconcile = true
   stack_id  = spacelift_stack.terraform-project.id
   schedule  = ["*/15 * * * *"] # Every 15 minutes
-  timezone = "EDT"
+  timezone = "New_York EDT"
 }
 
 
