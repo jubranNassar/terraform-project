@@ -8,6 +8,12 @@ resource "spacelift_stack" "terraform-project" {
     }
 }
 
+resource "spacelift_drift_detection" "terraform-project-drift" {
+  reconcile = true
+  stack_id  = spacelift_stack.terraform-project.id
+  schedule  = ["*/15 * * * *"] # Every 15 minutes
+}
+
 
 resource "spacelift_stack" "worker-pool" {
     branch = "main"
