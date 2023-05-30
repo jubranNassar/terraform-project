@@ -4,4 +4,3 @@ resource spacelift_blueprint {
     state = "DRAFT"
     # template = ""
 }
-
