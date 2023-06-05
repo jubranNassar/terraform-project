@@ -1,4 +1,4 @@
-resource spacelift_blueprint {
+resource spacelift_blueprint "cifrcloud" {
     name = "cifrcloud"
     space = "root"
     state = "DRAFT"
