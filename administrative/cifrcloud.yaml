@@ -7,65 +7,12 @@ inputs:
     options:
       - root
       - legacy
-  - id: avx_account_name
-    name: avx account name
-  - id: avx_tgw_account_name
-    name: avx tgw account name
-    default: CIFRaz
-  - id: common_osdisksize
-    name: common osdisksize
   - id: common_casename
-    name: common casename
+    name: Common case name
   - id: common_caselocation
-    name: common caselocation
+    name: Common case location
   - id: common_pi
     name: common pi
-  - id: splunk_count
-    name: splunk count
-    type: integer
-  - id: splunk_vmsize
-    name: splunk vmsize
-  - id: splunk_disksize
-    name: splunk disksize
-  - id: ingester_count
-    name: ingester count
-    type: integer
-  - id: ingester_vmsize
-    name: ingester vmsize
-  - id: ingester_disksize
-    name: ingester disksize
-  - id: ingester_engine_count
-    name: ingester engine count
-    type: integer
-  - id: ingester_engine_vmsize
-    name: ingester engine vmsize
-  - id: ingester_engine_disksize
-    name: ingester engine disksize
-  - id: splunk_ctrl_count
-    name: splunk ctrl count
-  - id: splunk_ctrl_vmsize
-    name: splunk ctrl vmsize
-  - id: splunk_ctrl_disksize
-    name: splunk ctrl disksize
-  - id: analyst_wincount
-    name: analyst wincount
-  - id: analyst_winvmsize
-    name: analyst winvmsize
-  - id: analyst_windisksize
-    name: analyst windisksize
-  - id: analyst_lincount
-    name: analyst lincount
-  - id: analyst_linvmsize
-    name: analyst linvmsize
-  - id: analyst_lindisksize
-    name: analyst lindisksize
-  - id: splunk_indexer_count
-    name: splunk indexer count
-    type: integer
-  - id: splunk_indexer_vmsize
-    name: splunk indexer vmsize
-  - id: splunk_indexer_disksize
-    name: splunk indexer disksize
   - id: trigger_run
     name: Trigger run upon stack creation?
     type: boolean
@@ -73,6 +20,17 @@ inputs:
 stack:
   name: ${{ inputs.stack_name }}
   space: ${{ inputs.space }}
-environment: 
-  variables:
-    - name: ${{ inputs.}}
+  environment: 
+    variables:
+      - name: common_casename
+        value: ${{inputs.common_casename}}
+      - name: common_caselocation
+        value: ${{inputs.common_caselocation}}
+      - name: common_pi
+        value: ${{inputs.common_pi}}
+      - name: TF_CLI_ARGS
+        value: -var-file=terraform-azure-cifrcloud-main/env/prod/small.tfvars
+  vcs:
+    branch: main
+      repository: terraform-azure-cifrcloud-main
+      provider: GITHUB_ENTERPRISE
