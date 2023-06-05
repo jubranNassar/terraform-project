@@ -14,9 +14,8 @@ inputs:
   - id: common_pi
     name: common pi
   - id: trigger_run
-    name: Trigger run upon stack creation?
     type: boolean
-    default: false
+    default: true
 stack:
   name: ${{ inputs.stack_name }}
   space: ${{ inputs.space }}
@@ -29,7 +28,7 @@ stack:
       - name: common_pi
         value: ${{inputs.common_pi}}
       - name: TF_CLI_ARGS
-        value: -var-file=./env/prod/small.tfvars
+        value: -var-file=terraform-azure-cifrcloud-main/env/prod/small.tfvars
   vcs:
     branch: main
     namespace: jubranNassar
