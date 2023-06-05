@@ -28,8 +28,8 @@ stack:
         value: ${{inputs.common_caselocation}}
       - name: common_pi
         value: ${{inputs.common_pi}}
-      # - name: TF_CLI_ARGS
-      #   value: -var-file=terraform-azure-cifrcloud-main/env/prod/small.tfvars
+      - name: TF_CLI_ARGS
+        value: -var-file=terraform-azure-cifrcloud-main/env/prod/small.tfvars
   vcs:
     branch: main
     namespace: jubranNassar
