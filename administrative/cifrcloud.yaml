@@ -35,3 +35,7 @@ stack:
       namespace: jubranNassar
       repository: terraform-azure-cifrcloud-main
       provider: GITHUB_ENTERPRISE
+  vendor:
+    terraform:
+      manage_state: true
+      version: "1.3.0"
