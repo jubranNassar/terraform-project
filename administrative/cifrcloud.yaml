@@ -29,7 +29,7 @@ stack:
       - name: common_pi
         value: ${{inputs.common_pi}}
       - name: TF_CLI_ARGS
-        value: -var-file="./env/prod/small.tfvars"
+        value: -var-file="./envs/prod/small.tfvars"
   vcs:
     branch: main
     namespace: jubranNassar
