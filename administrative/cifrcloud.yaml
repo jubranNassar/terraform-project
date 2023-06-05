@@ -22,11 +22,11 @@ stack:
   space: ${{ inputs.space }}
   environment: 
     variables:
-      - name: common_casename
+      - name: TF_VAR_common_casename
         value: ${{inputs.common_casename}}
-      - name: common_caselocation
+      - name: TF_VAR_common_caselocation
         value: ${{inputs.common_caselocation}}
-      - name: common_pi
+      - name: TF_VAR_common_pi
         value: ${{inputs.common_pi}}
       - name: TF_CLI_ARGS
         value: -var-file="./envs/prod/small.tfvars"
