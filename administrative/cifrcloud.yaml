@@ -32,5 +32,6 @@ stack:
         value: -var-file=terraform-azure-cifrcloud-main/env/prod/small.tfvars
   vcs:
     branch: main
+      namespace: "jubranNassar"
       repository: terraform-azure-cifrcloud-main
       provider: GITHUB_ENTERPRISE
