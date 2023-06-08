@@ -11,7 +11,7 @@ webhook[wbdata] {
     "payload": {
       "embeds": [{
         "title": "Drift detection run triggered!",
-        "description": sprintf("Stack: [%s](http://my-first-env.app.spacelift.tf/stack/%s)\nRun ID: [%s](http://my-first-env.app.spacelift.tf/stack/%s/run/%s)", [stack.name,stack.id,run.id,stack.id, run.id]),
+        "description": sprintf("Stack: [%s](http://my-first-env.app.spacelift.io/stack/%s)\nRun ID: [%s](http://my-first-env.app.spacelift.io/stack/%s/run/%s)", [stack.name,stack.id,run.id,stack.id, run.id]),
         }]
      }
   }
