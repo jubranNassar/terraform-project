@@ -87,10 +87,6 @@ resource "aws_instance" "jubran_dev_node" {
   
 } 
 
-resource "aws_instance" "jubran_test_node" {
-  instance_type = "t2.micro"
-  ami           = data.aws_ami.dev_server_ami.id
-} 
 
 resource "aws_s3_bucket" "jubran-test-bucket" {
   bucket = "jubran-test-bucket"
