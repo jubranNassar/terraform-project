@@ -29,3 +29,5 @@ resource "spacelift_stack" "worker-pool" {
         namespace = "jubranNassar"
     }
 }
+
+data "spacelift_ips" "ips" {}
