@@ -31,3 +31,7 @@ resource "spacelift_stack" "worker-pool" {
 }
 
 data "spacelift_ips" "ips" {}
+
+output "spacelift_ips" {
+  value = data.spacelift_ips.ips
+}
