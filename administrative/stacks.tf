@@ -30,8 +30,17 @@ resource "spacelift_stack" "worker-pool" {
     }
 }
 
-data "spacelift_ips" "ips" {}
-
-output "spacelift_ips" {
-  value = data.spacelift_ips.ips
+resource "spacelift_stack" "cloudformation-test" {
+    cloudformation {
+    entry_template_file = "main.yaml"
+    region              = "us-east-1"
+    template_bucket     = "s3://jubran-test-bucket/cloudformation-spacelift-stack/"
+    stack_name          = "cloudformation-spacelift-stack"
+  }
+  branch = "main"
+  name = resource.spacelift_stack.cloudformation-test.name
+  repository = "cloudformation-example"
+  github_enterprise {
+    namespace = "jubranNassar"
+  }
 }
