@@ -1,6 +1,6 @@
 resource spacelift_blueprint "cifrcloud" {
     name = "cifrcloud"
     space = "root"
-    state = "DRAFT"
+    state = "PUBLISHED"
     template = file("./cifrcloud.yaml")
 }
