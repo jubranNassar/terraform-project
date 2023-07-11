@@ -38,7 +38,7 @@ resource "spacelift_stack" "cloudformation-test" {
     stack_name          = "cloudformation-spacelift-stack"
   }
   branch = "main"
-  name = resource.spacelift_stack.cloudformation-test.name
+  name = "cloudformation-test"
   repository = "cloudformation-example"
   github_enterprise {
     namespace = "jubranNassar"
