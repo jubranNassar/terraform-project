@@ -3,3 +3,8 @@ resource "spacelift_mounted_file" "public-key" {
   relative_path = "public-key"
   content       = filebase64("${path.module}/jubran-dev-key.pub")
 }
+
+resource "spacelift_context" "ip-config" {
+  name = "dev ips"
+  space_id = "legacy"
+}
