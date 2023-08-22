@@ -91,9 +91,3 @@ resource "aws_instance" "jubran_dev_node" {
 resource "aws_s3_bucket" "jubran-test-bucket" {
   bucket = "jubran-test-bucket"
 }
-
-resource "spacelift_environment_variable" "dev-ip" {
-  context_id = spacelift_context.ip-config.id
-  name = "dev-ip"
-  value = aws_instance.jubran_dev_node.public_ip
-}
