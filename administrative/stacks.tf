@@ -44,3 +44,4 @@ resource "spacelift_stack" "cloudformation-test" {
     namespace = "jubranNassar"
   }
 }
+
