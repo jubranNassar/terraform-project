@@ -4,3 +4,4 @@ resource spacelift_blueprint "cifrcloud" {
     state = "PUBLISHED"
     template = file("./cifrcloud.yaml")
 }
+
