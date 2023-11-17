@@ -91,3 +91,7 @@ resource "aws_instance" "jubran_dev_node" {
 resource "aws_s3_bucket" "jubran-test-bucket" {
   bucket = "jubran-test-bucket"
 }
+
+resource "aws_s3_bucket" "test-bucket" {
+  bucket = "jubran-example-s3-bucket"
+}
