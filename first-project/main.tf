@@ -19,6 +19,17 @@ resource "aws_subnet" "dev_public_subnet" {
   }
 }
 
+resource "aws_subnet" "dev_public_subnet-2" {
+  vpc_id                  = aws_vpc.dev_vpc.id
+  cidr_block              = "10.0.0.0/16"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1b"
+
+  tags = {
+    Name = "dev_public_subnet"
+  }
+}
+
 resource "aws_internet_gateway" "dev_internet_gateway" {
   vpc_id = aws_vpc.dev_vpc.id
 
