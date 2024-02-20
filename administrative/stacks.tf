@@ -4,7 +4,7 @@ resource "spacelift_stack" "terraform-project" {
     repository = "terraform-project"
     project_root = "first-project"
     terraform_smart_sanitization = true
-    worker_pool_id = "01H123RBHVK3GAX2KSTFC5R5WP"
+    # worker_pool_id = "01H123RBHVK3GAX2KSTFC5R5WP"
     space_id = "demo-resources-01H7T746B176K9S5MH0N63MGPH"
     github_enterprise {
         namespace = "jubranNassar"
