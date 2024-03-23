@@ -16,7 +16,7 @@ resource "spacelift_drift_detection" "terraform-project-drift" {
   schedule  = ["*/15 * * * *"] # Every 15 minutes
   timezone = "America/New_York"
 }
-
+fail on purpose
 
 resource "spacelift_stack" "worker-pool" {
     branch = "main"
