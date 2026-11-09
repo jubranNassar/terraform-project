@@ -76,16 +76,9 @@ resource "aws_security_group" "dev_sg" {
   }
 }
 
-resource "aws_key_pair" "jubran_auth" {
-  key_name   = "jubran_key"
-  public_key = file("/mnt/workspace/public-key")
-}
-
 resource "aws_instance" "jubran_dev_node" {
   instance_type = var.instance_type
   ami           = data.aws_ami.dev_server_ami.id
-
-  key_name = aws_key_pair.jubran_auth.id
 
   vpc_security_group_ids = [aws_security_group.dev_sg.id]
 
@@ -97,8 +90,3 @@ resource "aws_instance" "jubran_dev_node" {
   }
   
 } 
-
-
-resource "aws_s3_bucket" "jubran-test-bucket" {
-  bucket = "jubran-test-bucket"
-}
