@@ -4,6 +4,6 @@ data "aws_ami" "dev_server_ami" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+    values = ["ubuntu-eks-pro/k8s_1.33/images/hvm-ssd-gp3/ubuntu-noble-24.04-arm64-server-*"]
   }
 }
